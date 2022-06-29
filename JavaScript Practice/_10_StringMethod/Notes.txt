@@ -1,0 +1,74 @@
+			Extracting String Parts
+
+			There are 3 methods for extracting a part of a string:
+
+			    slice(start, end)
+			    substring(start, end)
+			    substr(start, length)
+
+
+
+
+			JavaScript counts positions from zero.
+
+			First position is 0.
+
+			Second position is 1.
+
+=====================================================================================================================================
+
+			If you omit the second parameter, the method will slice out the rest of the string:
+			Example
+			let part = str.slice(7);
+
+			or, counting from the end:
+			Example
+			let part = str.slice(-12);
+
+=====================================================================================================================================
+
+
+			substring() is similar to slice().
+
+			The difference is that start and end values less than 0 are treated as 0 in substring().Hence -12 is 0
+
+=====================================================================================================================================
+
+
+			substr() is similar to slice().
+
+			The difference is that the second parameter specifies the length of the extracted part.
+
+=====================================================================================================================================
+
+
+			The replace() method does not change the string it is called on.
+
+			The replace() method returns a new string.
+
+			The replace() method replaces only the first match
+
+			If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
+
+			By default, the replace() method replaces only the first match:
+
+			By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+
+			To replace case insensitive, use a regular expression with an /i flag (insensitive):
+
+			To replace all matches, use a regular expression with a /g flag (global match):
+
+
+=====================================================================================================================================
+
+			All string methods return a new string. They don't modify the original string.
+
+			Formally said:
+
+			Strings are immutable: Strings cannot be changed, only replaced.
+
+=====================================================================================================================================
+
+
+
+=====================================================================================================================================

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Javascript Objects and accessing the Object</h2>
+
+<p id ="demo"></p>
+
+<script>
+
+const person = {
+// Create an Object
+ firstName: "john",
+ lastName: "Doe",
+ age: 50,
+ eyeColor: "Blue"
+};
+
+//Display some data from the object:
+document.getElementById("demo").innerHTML = person.firstName +" is "+ person["age"] + " year old.";
+</script>
+
+</body>
+</html>
+
