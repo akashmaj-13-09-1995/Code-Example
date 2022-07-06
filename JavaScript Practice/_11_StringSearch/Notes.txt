@@ -1,0 +1,55 @@
+				Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+				Example
+				   let str = "Please locate where 'locate' occurs!";
+				   str.lastIndexOf("John");
+
+================================================================================================================================================================================
+
+				Both methods accept a second parameter as the starting position for the search:
+				Example
+				   let str = "Please locate where 'locate' occurs!";
+				   str.indexOf("locate", 15);
+
+================================================================================================================================================================================
+
+				Did You Notice?
+
+				The two methods, indexOf() and search(), are equal?
+
+				They accept the same arguments (parameters), and return the same value?
+
+				The two methods are NOT equal. These are the differences:
+
+				   The search() method cannot take a second start position argument.
+				   The indexOf() method cannot take powerful search values (regular expressions).
+
+				You will learn more about regular expressions in a later chapter.
+================================================================================================================================================================================
+
+				--string.startsWith(searchvalue, start)--
+
+			
+
+				Parameter 			Description
+				searchvalue 			Required. The value to search for.
+				start 				Optional. Default 0. The position to start the search.
+
+
+				Examples
+				   let text = "Hello world, welcome to the universe.";
+				   text.startsWith("world")    // Returns false
+
+				   let text = "Hello world, welcome to the universe.";
+				   text.startsWith("world", 5)    // Returns false
+				
+				   let text = "Hello world, welcome to the universe.";
+				   text.startsWith("world", 6)    // Returns true 
+
+
+				Note
+
+				The startsWith() method is case sensitive.
+
+
+================================================================================================================================================================================
+
