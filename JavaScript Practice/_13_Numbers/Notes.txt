@@ -1,0 +1,101 @@
+			JavaScript Numbers are Always 64-bit Floating Point
+
+			Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.
+
+			JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.
+
+			This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63:
+
+			Value (aka Fraction/Mantissa) 			Exponent 				Sign
+			52 bits (0 - 51)  				11 bits (52 - 62) 			1 bit (63)
+==========================================================================================================================================================================================================
+
+			The maximum number of decimals is 17.
+
+==========================================================================================================================================================================================================
+
+			JavaScript will try to convert strings to numbers in all numeric operations:
+
+			 let x = "100";
+			 let y = "10";
+			 let z = x / y; //10
+			 let z = x * y; //1000
+			 let z = x - y; //90
+			 let z = x + y; //not for this case . In this , it will use for concatenation
+
+==========================================================================================================================================================================================================
+
+			NaN - Not a Number
+
+			NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+
+			Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+			Example
+			 let x = 100 / "Apple";
+
+
+			You can use the global JavaScript function isNaN() to find out if a value is a not a number:
+
+			Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN:
+			Example
+			 let x = NaN;
+			 let y = 5;
+			 let z = x + y;
+
+			NaN is a number: typeof NaN returns number:
+
+==========================================================================================================================================================================================================
+
+			Infinity
+
+			Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+
+			Division by 0 (zero) also generates Infinity:
+			Example
+			 let x =  2 / 0;  // Infinity
+			 let y = -2 / 0;  //-Infinity
+
+
+			Infinity is a number: typeof Infinity returns number.
+			Example
+			 typeof Infinity; //number
+
+==========================================================================================================================================================================================================
+
+			Hexadecimal
+
+			JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
+			Example
+			 let x = 0xFF;
+
+			Note:
+			 Never write a number with a leading zero (like 07).
+			 Some JavaScript versions interpret numbers as octal if they are written with a leading zero.
+
+
+			By default, JavaScript displays numbers as base 10 decimals.
+
+			But you can use the toString() method to output numbers from base 2 to base 36.
+
+			Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
+
+==========================================================================================================================================================================================================
+
+			 let x = 500;
+			 let y = new Number(500);
+			 (x === y) //false
+			 (x == y) //true
+
+		
+
+			Comparing two JavaScript objects always returns false.
+
+
+			 let x = new Number(500); 
+			 let y = new Number(500); 
+
+			 (x === y) //false
+			 (x == y) //false
+==========================================================================================================================================================================================================
+
